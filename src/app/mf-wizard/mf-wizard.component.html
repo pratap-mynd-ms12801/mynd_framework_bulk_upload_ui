@@ -1,0 +1,26 @@
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!-- Favicon-->
+<link rel="stylesheet" href="/assets/css/daterangepicker.min.css" />
+<link rel="stylesheet" href="/assets/css/dataTables.min.css" />
+<link rel="stylesheet" href="/assets/css/luno.style.min.css" />
+<link rel="stylesheet" href="/assets/css/custom.css" />
+<link rel="stylesheet" href="/assets/css/jquerysteps.min.css" />
+<link rel="stylesheet" href="/assets/css/dropify.min.css" />
+<link rel="stylesheet" href="/assets/css/jsgrid.min.css" />
+<ul class="step-steps">
+</ul>
+<div class="page-toolbar px-xl-4 px-sm-2 px-0 py-2">
+  <div class="container-fluid">
+
+    <div class="col-12">
+      
+      <div class="step-app h-wizard-demo4 menuwizard">
+        <ul class="step-steps">
+          <li *ngFor="let wizard of formProp; let i = index" data-step-target="step" (click)="activeMenu(i)">
+            <span [ngClass]="wizard.spClass"></span> {{wizard.label}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+
+<div id="upload_status">
+
+
+<app-mf-wizard [formProp]="wizardMenuArr" (res)="activeTab($event)"></app-mf-wizard>
+</div>
+<div id="form_manager_body" class="form-control form-control-lg" >
+   <form #form_data="ngForm" (ngSubmit)="update_data(form_data)">
+<!--    
+   <label for="event_name">Event Name</label><br>
+   <input class="form-control form-control-lg" type="text" placeholder="Enter event name" aria-label=".form-control-lg example" [(ngModel)]="event_name" 
+   (change)="event_name_callback($event)">
+   
+   <span class="text-danger"  *ngIf="event_name_validator1">
+      Invalid event name
+   </span>
+
+    -->
+   <!-- <br>
+   <label for="sub_event">Sub Event</label><br>
+   <input class="form-control form-control-lg" type="text" placeholder="Enter sub-event name" aria-label=".form-control-lg example" [(ngModel)]="sub_portal">
+    -->
+   <div class="card-body">
+      <br>
+      <h5 class="card-title">Upload Excel</h5>
+      <p class="card-text">(Only xlsx and csv file formats are supported)</p>
+      <div id="FileChooser">
+         <input class="form-control form-control-lg" id="formFileLg" type="file"
+            (change)="onFileChange($event)">
+      </div>
+   </div>
+  
+   <div class="text-center">
+   <button type="submit">Save</button>
+</div>
+</form>
+
+<div class="downloadTemplate" id="downloadTemplate">
+   <button type="submit" (click)="sampleTemplateCallBack($event)">Download Sample</button>
+</div>
+
+     <div *ngIf="apiResponse">
+          <h3>API Response:</h3>
+          <p>{{ apiResponse }}</p>
+     </div>
+
+     <div *ngIf="sampleResponse">
+      <h3>API Response:</h3>
+      <!-- <a [href]="getSafeUrl(sampleResponse)" target="_blank">{{ sampleResponse }}</a> -->
+      <a href={{sampleResponse}} target="_blank">{{ sampleResponse }} </a>
+ </div>
+
+
+</div>

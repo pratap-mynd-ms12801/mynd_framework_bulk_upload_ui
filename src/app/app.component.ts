@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit{
   title = 'bulk_import_export';
+
+  ngOnInit() {
+
+    localStorage.setItem("event_name","lessor_registration")
+    localStorage.setItem('token','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6Ijk4OWJlMjM1LTk5OTUtNGVjYS04MGYyLWQ5ZTgzM2EwYTJjYSIsIlVzZXJJZCI6IjEiLCJQcm9kdWN0U3RhbXAiOiIzMTJkMTg5NS0yMTg1LTRiYWYtOTk5YS1mYWQ5OWUxMzQ2MDciLCJBY2NvdW50U3RhbXAiOiIzOTI0NWYxZi1lMTJkLTRhYTYtYTNiYy02ZTkxMzg5NzUxOGEiLCJQcm9kdWN0SWQiOiIyIiwiQWNjb3VudElkIjoiMiIsIlByb2R1Y3RTZXJ2aWNlU3RhbXAiOiIiLCJQcm9kdWN0TGlzdCI6IlswXSIsIlJvbGUiOiJhY2NvdW50X2FkbWluIiwiUm9sZUlkIjoiMCIsIklzQWRtaW4iOiIxIiwiTGFuZyI6ImVuIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6ImFiaGlzaGVrLmdhcmdAbXluZHNvbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhYmhpc2hlay5nYXJnQG15bmRzb2wuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIyOTNkZDNjZS1mY2Y0LTRkMDQtOTExMS0zYTk1MGU0M2I1YjkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiJBcHIgVGh1IDE4IDIwMjQgMTA6MDY6NDQgQU0iLCJuYmYiOjE2ODE4MTI0MDQsImV4cCI6MTcxMzQxNTAwNCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE2OCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNjgifQ.UB3lq_EO7LV8sKO7995ID_q7SbGG8aUYs9pPy-ANB8M')
+  }
+
+  
 }
