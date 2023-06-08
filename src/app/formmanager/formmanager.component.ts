@@ -103,9 +103,10 @@ export class FormmanagerComponent implements OnInit {
   
         this.httpService.getData(url, payload).subscribe(
           {
-            next(res) {
+            next(res:any) {
               // callback1(res);
               if (typeof callback1 == "function") {
+                console.log('rs',res)
                 callback1(res);
             }
           },
