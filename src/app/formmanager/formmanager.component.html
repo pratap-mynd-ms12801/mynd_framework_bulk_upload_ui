@@ -5,7 +5,7 @@
 <app-mf-wizard [formProp]="wizardMenuArr" (res)="activeTab($event)"></app-mf-wizard>
 </div>
 <div id="form_manager_body" class="form-control form-control-lg" >
-   <form #form_data="ngForm" (ngSubmit)="update_data(form_data)">
+   <form #form_data="ngForm" (ngSubmit)="update_data_1(form_data)">
 <!--    
    <label for="event_name">Event Name</label><br>
    <input class="form-control form-control-lg" type="text" placeholder="Enter event name" aria-label=".form-control-lg example" [(ngModel)]="event_name" 

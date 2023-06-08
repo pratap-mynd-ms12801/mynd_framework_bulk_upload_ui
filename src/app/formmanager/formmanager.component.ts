@@ -31,7 +31,7 @@ export class FormmanagerComponent implements OnInit {
 
   constructor(private http: HttpClient, private elRef: ElementRef, public renderer: Renderer2, private httpService: HttpService, private sanitizer: DomSanitizer) { }
 
-  update_data(formData: any) {
+  update_data_1(formData: any) {
     this.onSubmit(formData, (res: any) => {
       this.apiResponse = JSON.stringify(
         res["data"]
